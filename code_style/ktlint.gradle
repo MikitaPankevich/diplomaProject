@@ -1,0 +1,14 @@
+configurations {
+    ktlint
+}
+
+dependencies {
+    ktlint 'com.pinterest:ktlint:0.35.0'
+}
+
+task ktlint(type: JavaExec, group: "verification") {
+    main = "com.pinterest.ktlint.Main"
+    classpath = configurations.ktlint
+    args "src/**/*.kt", "--reporter=plain",
+            "--reporter=checkstyle,output=${buildDir}/reports/checkstyle/ktlint-report.xml"
+}

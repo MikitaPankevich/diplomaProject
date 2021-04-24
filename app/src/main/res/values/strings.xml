@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Diploma Project</string>
+
+    <string name="network_error">Network error</string>
+    <string name="timeout_error">Timeout error</string>
+    <string name="unknown_error">Unknown error</string>
+</resources>

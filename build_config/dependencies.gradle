@@ -1,0 +1,63 @@
+ext {
+    buildTools = '29.0.2'
+    minSdk = 25
+    targetSdk = 29
+    compileSdk = 29
+
+    appСompat = '1.2.0-alpha01'
+    core = '1.2.0-rc01'
+    constraintLayout = '1.1.3'
+    fragment = '1.2.0-rc04'
+    glide = '4.10.0'
+
+    moxycommunity = '1.0.13'
+    toothpick = '2.1.0'
+    cicerone = '5.0.0'
+    rxJava = '2.2.0'
+    rxAndroid = '2.1.1'
+    retrofit = '2.7.1'
+    loggingInterceptor = '4.3.0'
+    materialComponents = '1.2.0-alpha03'
+
+    analytics = '17.2.1'
+    crashlytic = '2.10.1'
+
+    kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    kapt = [
+            moxy     : "com.github.moxy-community:moxy-compiler:$moxycommunity",
+            toothpick: "com.github.stephanenicolas.toothpick:toothpick-compiler:$toothpick",
+            glide    : "com.github.bumptech.glide:compiler:$glide"
+    ]
+    androidX = [
+            appCompat       : "androidx.appcompat:appcompat:$appСompat",
+            coreKtx         : "androidx.core:core-ktx:$core",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:$constraintLayout",
+            fragment        : "androidx.fragment:fragment:$fragment"
+    ]
+    moxycommunity = [
+            android: "com.github.moxy-community:moxy-androidx:$moxycommunity",
+            core   : "com.github.moxy-community:moxy:$moxycommunity"
+    ]
+    toothpick = [
+            runtime: "com.github.stephanenicolas.toothpick:toothpick-runtime:$toothpick",
+            android: "com.github.stephanenicolas.toothpick:smoothie-androidx:$toothpick"
+    ]
+    cicerone = "ru.terrakok.cicerone:cicerone:$cicerone"
+    rx = [
+            java   : "io.reactivex.rxjava2:rxjava:$rxJava",
+            android: "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+    ]
+    retrofit = [
+            core              : "com.squareup.retrofit2:retrofit:$retrofit",
+            converterGson     : "com.squareup.retrofit2:converter-gson:$retrofit",
+            rxAdapter         : "com.squareup.retrofit2:adapter-rxjava2:$retrofit",
+            loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$loggingInterceptor"
+    ] // Transitively contains Gson (2.8.2) version.
+
+    materialComponents = "com.google.android.material:material:$materialComponents"
+    glide = "com.github.bumptech.glide:glide:$glide"
+    firebase = [
+            analytics : "com.google.firebase:firebase-analytics:$analytics",
+            crashlytic: "com.crashlytics.sdk.android:crashlytics:$crashlytic"
+    ]
+}

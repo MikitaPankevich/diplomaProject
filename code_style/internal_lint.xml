@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="InvalidPackage">
+        <ignore path="**/toothpick-runtime-2.1.0.jar" />
+    </issue>
+</lint>
