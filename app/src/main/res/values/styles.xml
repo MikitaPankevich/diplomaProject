@@ -5,10 +5,44 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/dark_gray</item>
     </style>
 
     <style name="AppTheme.Splash">
-        <item name="android:windowBackground">@drawable/launch_screen</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="Widget.MaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">25dp</item>
+        <item name="iconTint">@color/white</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Regular.14.White</item>
+    </style>
+
+    <style name="Widget.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/TextAppearance.Bold.16</item>
+        <item name="android:textColor">@color/blue_nuke_end</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">25dp</item>
+    </style>
+
+    <style name="Widget.TextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="hintTextAppearance">@style/TextAppearance.Bold.14.DarkGray</item>
+        <item name="errorTextAppearance">@style/TextAppearance.Medium.12.Red</item>
+    </style>
+
+    <style name="Widget.TextInputEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Bold.20</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Widget.DropDownInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="android:textColorHint">@color/dark_gray</item>
+        <item name="hintTextAppearance">@style/TextAppearance.Bold.14.DarkGray</item>
+        <item name="errorTextAppearance">@style/TextAppearance.Medium.12.Red</item>
     </style>
 </resources>

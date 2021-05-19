@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "451805476144",
+    "project_id": "diploma-projecto",
+    "storage_bucket": "diploma-projecto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451805476144:android:df5139cd20e925bede04f5",
+        "android_client_info": {
+          "package_name": "com.demo.diplomaproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451805476144-th0n0bgk41v4btq9d89a9i582rj132ch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.demo.diplomaproject",
+            "certificate_hash": "7f756af28407ea760ebb4be77884d9fdbef31d9c"
+          }
+        },
+        {
+          "client_id": "451805476144-lksri6uqekns97jgbfr78b2fhs062hnn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5nNP_Z60ZiIpqKyUiZ67mwWcgRes0oj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451805476144-lksri6uqekns97jgbfr78b2fhs062hnn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,4 +4,7 @@
     <string name="network_error">Network error</string>
     <string name="timeout_error">Timeout error</string>
     <string name="unknown_error">Unknown error</string>
+    <string name="incorrect_email_error">Please enter a valid email address.</string>
+    <string name="short_password_error">Your password must be between 6 and 30 characters.</string>
+    <string name="not_the_same_password_error">Please make sure your passwords match.</string>
 </resources>

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:opacity="opaque">
-    <item android:drawable="@android:color/white" />
 
-    <item>
+    <item android:drawable="@color/white" />
 
-        <bitmap
-            android:gravity="center" />
-
-    </item>
-
+    <item
+        android:drawable="@drawable/ic_recording"
+        android:gravity="center" />
 </layer-list>

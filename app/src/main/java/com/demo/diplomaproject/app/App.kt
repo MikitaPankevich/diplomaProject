@@ -1,7 +1,6 @@
 package com.demo.diplomaproject.app
 
 import android.app.Application
-import com.demo.diplomaproject.BuildConfig
 import com.demo.diplomaproject.di.DI
 import com.demo.diplomaproject.di.module.AppModule
 import com.demo.diplomaproject.di.module.ServerModule

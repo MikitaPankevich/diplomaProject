@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
@@ -74,6 +76,9 @@ dependencies {
 
     // Glide
     implementation(glide)
+
+    // Firebase version control
+    implementation platform(firebaseBoM)
 
     // Firebase
     implementation firebase.values()

@@ -3,9 +3,18 @@
     <style name="Base.AppTheme" parent="Theme.MaterialComponents.Light.Bridge">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/dark_gray</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+    <style name="ProgressBar" parent="Base.AppTheme">
+        <item name="colorAccent">@color/blue_nuke_end</item>
+    </style>
+
+    <style name="AppOverlayTheme.InputLayout" parent="ThemeOverlay.MaterialComponents">
+        <item name="colorControlActivated">@color/bombay</item>
+        <item name="colorControlNormal">@color/bombay</item>
     </style>
 </resources>
