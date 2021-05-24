@@ -10,5 +10,6 @@ data class UserProfile(
     @SerializedName("surname") val surname: String? = "",
     @SerializedName("role") val role: ParticipateType? = ParticipateType.CLEAR,
     @SerializedName("expirience") val experience: String? = "",
-    @SerializedName("university") val university: String? = ""
+    @SerializedName("university") val university: String? = "",
+    @SerializedName("currentDoctor") val currentDoctor: String? = "",
 ) : Parcelable

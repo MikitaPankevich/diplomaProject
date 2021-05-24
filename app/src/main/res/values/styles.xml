@@ -45,4 +45,13 @@
         <item name="hintTextAppearance">@style/TextAppearance.Bold.14.DarkGray</item>
         <item name="errorTextAppearance">@style/TextAppearance.Medium.12.Red</item>
     </style>
+
+    <style name="Widget.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">76dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="buttonGravity">center_vertical</item>
+        <item name="android:background">@color/blue_nuke_end</item>
+        <item name="android:elevation">4dp</item>
+    </style>
 </resources>

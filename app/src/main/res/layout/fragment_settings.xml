@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="85dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settingsToolbar"
+        style="@style/Widget.Toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/settingsToolbarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Settings"
+            android:textAppearance="@style/TextAppearance.Bold.20.White" />
+
+        <ImageButton
+            android:id="@+id/settingsToolbarImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_logout" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settingsProfile"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:drawableEnd="@drawable/ic_right"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Profile"
+        android:textAppearance="@style/TextAppearance.Medium.18"
+        android:textColor="@color/black"
+        app:iconTint="@color/black" />
+
+    <View
+        android:id="@+id/profileButtonDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/dark_gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settingsLanguage"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:drawableEnd="@drawable/ic_right"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Language"
+        android:textAppearance="@style/TextAppearance.Medium.18"
+        android:textColor="@color/black"
+        app:iconTint="@color/black" />
+
+    <View
+        android:id="@+id/languageButtonDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/dark_gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settingsThemes"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:drawableEnd="@drawable/ic_right"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Theme"
+        android:textAppearance="@style/TextAppearance.Medium.18"
+        android:textColor="@color/black"
+        app:iconTint="@color/black" />
+
+    <View
+        android:id="@+id/themesButtonDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/dark_gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settingsAboutDoctor"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:drawableEnd="@drawable/ic_right"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:paddingStart="20dp"
+        android:text="About doctor"
+        android:textAppearance="@style/TextAppearance.Medium.18"
+        android:textColor="@color/black" />
+
+    <View
+        android:id="@+id/settingsAboutDoctorButtonDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/dark_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Version: "
+            android:textAppearance="@style/TextAppearance.Medium.18" />
+
+        <TextView
+            android:id="@+id/versionNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="28dp"
+            android:textAppearance="@style/TextAppearance.Medium.18"
+            tools:text="1.0.2" />
+
+    </LinearLayout>
+
+</LinearLayout>

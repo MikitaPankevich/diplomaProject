@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/averageRmsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average sound level: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/averageRms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/averageRmsLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="15 dB" />
+
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Result index: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/averageRmsLabel" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/resultLabel"
+        app:layout_constraintTop_toTopOf="@id/resultLabel"
+        tools:text="18.8" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Date: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultLabel" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/dateLabel"
+        app:layout_constraintTop_toTopOf="@id/dateLabel"
+        tools:text="19-02-2020" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue_nuke_end"
+        app:layout_constraintTop_toBottomOf="@id/dateLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

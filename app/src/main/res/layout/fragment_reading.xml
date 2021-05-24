@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="85dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/readingToolbar"
+        style="@style/Widget.Toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back">
+
+        <TextView
+            android:id="@+id/readingToolbarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Page 2: Reading Test"
+            android:textAppearance="@style/TextAppearance.Bold.20.White" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/readingTip1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="40dp"
+        android:text="1. Keep your phone 30cm away from your mouth"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/readingToolbar" />
+
+    <TextView
+        android:id="@+id/readingTip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="2. Press \'START\'"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="@id/readingTip1"
+        app:layout_constraintTop_toBottomOf="@id/readingTip1" />
+
+    <TextView
+        android:id="@+id/readingTip3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="15dp"
+        android:text="3. Read the text: \'The house I live in is located on the outskirts of a small town\'"
+        android:textAppearance="@style/TextAppearance.Bold.18.Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/readingTip2" />
+
+    <TextView
+        android:id="@+id/readingTip4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="2. Press \'STOP\'"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="@id/readingTip3"
+        app:layout_constraintTop_toBottomOf="@id/readingTip3" />
+
+    <ImageView
+        android:id="@+id/readingPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/readingTip4" />
+
+    <com.github.zagum.speechrecognitionview.RecognitionProgressView
+        android:id="@+id/readingProgressView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/readingPlay" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

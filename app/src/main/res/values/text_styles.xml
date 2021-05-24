@@ -19,12 +19,24 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="TextAppearance.Medium.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <style name="TextAppearance.Medium.12.Red">
         <item name="android:textColor">@color/red</item>
     </style>
 
     <style name="TextAppearance.Regular.14">
         <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Regular.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.Regular.18.Black">
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="TextAppearance.Regular.14.White">
@@ -51,6 +63,14 @@
         <item name="android:textColor">@color/blue_nuke_end</item>
     </style>
 
+    <style name="TextAppearance.Bold.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.Bold.18.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <style name="TextAppearance.Bold.20">
         <item name="android:textSize">20sp</item>
     </style>
@@ -59,9 +79,24 @@
         <item name="android:textColor">@color/blue_nuke_end</item>
     </style>
 
+    <style name="TextAppearance.Bold.20.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.Bold.20.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <style name="TextAppearance.Bold.26">
         <item name="android:textSize">26sp</item>
     </style>
 
+    <style name="TextAppearance.Bold.50">
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="TextAppearance.Bold.50.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
 
 </resources>

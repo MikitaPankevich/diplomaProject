@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mikitasdasdg" />
+
+    <TextView
+        android:id="@+id/itemSurname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/itemName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Pankevichddasdsad" />
+
+    <TextView
+        android:id="@+id/itemUniversityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="University: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemName" />
+
+    <TextView
+        android:id="@+id/itemUniversity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/itemUniversityLabel"
+        app:layout_constraintTop_toTopOf="@id/itemUniversityLabel"
+        tools:text="Vitebsk State" />
+
+    <TextView
+        android:id="@+id/itemExperienceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Experience: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemUniversityLabel" />
+
+    <TextView
+        android:id="@+id/itemExperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/itemExperienceLabel"
+        app:layout_constraintTop_toTopOf="@id/itemExperienceLabel"
+        tools:text="5 years" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="1dp"
+        android:background="@color/blue_nuke_end"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/itemExperienceLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

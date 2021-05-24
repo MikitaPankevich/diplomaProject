@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="85dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/voiceToolbar"
+        style="@style/Widget.Toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/voiceToolbarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Voice Test"
+            android:textAppearance="@style/TextAppearance.Bold.20.White" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/voiceDescribeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:paddingHorizontal="60dp"
+        android:text="When you will be ready tap on the icon below."
+        android:textAppearance="@style/TextAppearance.Bold.18.Black"
+        app:layout_constraintBottom_toTopOf="@id/voiceImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/voiceImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_microphone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/voiceAdviseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingHorizontal="50dp"
+        android:text="Please make sure you are in a quiet environment and have no extraneous noise."
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/voiceImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

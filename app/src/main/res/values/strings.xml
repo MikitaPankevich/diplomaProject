@@ -7,4 +7,12 @@
     <string name="incorrect_email_error">Please enter a valid email address.</string>
     <string name="short_password_error">Your password must be between 6 and 30 characters.</string>
     <string name="not_the_same_password_error">Please make sure your passwords match.</string>
+
+
+    <string name="language_english_non_translatable" translatable="false">English</string>
+    <string name="language_russian_non_translatable" translatable="false">Русский</string>
+    <!-- Language !-->
+    <string name="language_english">English</string>
+    <string name="language_russian">Russian</string>
+
 </resources>
