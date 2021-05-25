@@ -1,4 +1,8 @@
 package com.demo.diplomaproject.presentation.main.voice.test.result
 
-interface ResultView {
-}
+import moxy.MvpView
+import moxy.viewstate.strategy.AddToEndSingleStrategy
+import moxy.viewstate.strategy.StateStrategyType
+
+@StateStrategyType(AddToEndSingleStrategy::class)
+interface ResultView : MvpView

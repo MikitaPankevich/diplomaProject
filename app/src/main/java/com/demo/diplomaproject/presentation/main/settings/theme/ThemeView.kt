@@ -1,4 +1,8 @@
 package com.demo.diplomaproject.presentation.main.settings.theme
 
-interface ThemeView {
-}
+import moxy.MvpView
+import moxy.viewstate.strategy.AddToEndSingleStrategy
+import moxy.viewstate.strategy.StateStrategyType
+
+@StateStrategyType(AddToEndSingleStrategy::class)
+interface ThemeView : MvpView
