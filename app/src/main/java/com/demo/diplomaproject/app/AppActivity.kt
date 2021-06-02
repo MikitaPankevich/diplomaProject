@@ -6,7 +6,6 @@ import com.demo.diplomaproject.app.presentation.AppPresenter
 import com.demo.diplomaproject.app.presentation.AppView
 import com.demo.diplomaproject.core.AnimatedSupportAppNavigator
 import com.demo.diplomaproject.core.BaseFragment
-import com.demo.diplomaproject.core.FlowFragment
 import com.demo.diplomaproject.di.DI
 import kotlinx.android.synthetic.main.activity_app.*
 import moxy.MvpAppCompatActivity

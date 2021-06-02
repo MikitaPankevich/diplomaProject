@@ -6,6 +6,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class UserProfile(
+    @SerializedName("email") val email: String,
     @SerializedName("name") val name: String? = "",
     @SerializedName("surname") val surname: String? = "",
     @SerializedName("role") val role: ParticipateType? = ParticipateType.CLEAR,

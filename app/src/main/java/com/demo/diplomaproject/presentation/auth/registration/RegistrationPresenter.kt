@@ -124,8 +124,8 @@ class RegistrationPresenter @Inject constructor(
                 .subscribe(
                     {
                         databaseInteractor.updateUserProfile(
-                            email,
                             UserProfile(
+                                email,
                                 name,
                                 surname,
                                 userRole,

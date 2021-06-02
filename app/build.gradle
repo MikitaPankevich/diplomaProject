@@ -82,7 +82,4 @@ dependencies {
 
     // Firebase
     implementation firebase.values()
-
-    //Speech View
-    implementation 'com.github.zagum:SpeechRecognitionView:1.2.2'
 }

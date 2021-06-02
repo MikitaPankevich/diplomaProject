@@ -1,6 +1,7 @@
 package com.demo.diplomaproject.model.data.storage
 
 import android.content.Context
+import com.demo.diplomaproject.domain.entity.TestResult
 import com.demo.diplomaproject.domain.entity.UserProfile
 import com.google.gson.Gson
 import java.util.*
@@ -35,6 +36,19 @@ class Prefs @Inject constructor(
             appPrefs.edit().putString(USER_PROFILE, gson.toJson(user)).apply()
         }
 
+    var historyResults: MutableList<TestResult>
+        get() {
+            val history = appPrefs.getString(HISTORY, null)
+            return if (history != null) {
+                gson.fromJson(history, Array<TestResult>::class.java).toMutableList()
+            } else {
+                arrayListOf()
+            }
+        }
+        set(history) {
+            appPrefs.edit().putString(HISTORY, gson.toJson(history)).apply()
+        }
+
     fun clearUserData() {
         userProfile = null
     }
@@ -44,5 +58,6 @@ class Prefs @Inject constructor(
         private const val APP_DATA = "APP_DATA"
         private const val CURRENT_LOCALE = "CURRENT_LOCALE"
         private const val USER_PROFILE = "USER_PROFILE"
+        private const val HISTORY = "HISTORY"
     }
 }

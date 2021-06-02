@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:gravity="center"
-        android:text="2. Press \'STOP\'"
+        android:text="4. Press \'STOP\'"
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toStartOf="@id/readingTip3"
         app:layout_constraintTop_toBottomOf="@id/readingTip3" />
@@ -70,13 +70,25 @@
         android:id="@+id/readingPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/ic_play"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/readingTip4" />
 
-    <com.github.zagum.speechrecognitionview.RecognitionProgressView
+    <ImageView
+        android:id="@+id/readingStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/readingTip4" />
+
+    <com.demo.diplomaproject.coreui.speechanim.RecognitionProgressView
         android:id="@+id/readingProgressView"
         android:layout_width="match_parent"
         android:layout_height="60dp"
