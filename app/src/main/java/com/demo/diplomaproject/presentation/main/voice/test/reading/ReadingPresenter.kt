@@ -8,6 +8,8 @@ import com.demo.diplomaproject.model.data.service.SpeechService
 import com.demo.diplomaproject.ui.main.voice.VoiceScreens
 import moxy.InjectViewState
 import ru.terrakok.cicerone.Router
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 @InjectViewState
@@ -63,8 +65,10 @@ class ReadingPresenter @Inject constructor(
             averageRms.value.toString(),
             minRms.toString(),
             maxRms.toString(),
-            ((maxRms - minRms) / averageRms.value).toString()
+            ((maxRms - minRms) / averageRms.value).toString(),
+            System.currentTimeMillis()
         )
+
         router.navigateTo(VoiceScreens.ResultScreen(result))
     }
 }

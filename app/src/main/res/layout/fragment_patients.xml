@@ -7,13 +7,13 @@
     android:layout_marginBottom="85dp">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/historyToolbar"
+        android:id="@+id/patientsToolbar"
         style="@style/Widget.Toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/historyToolbarText"
+            android:id="@+id/patientsToolbarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -22,7 +22,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ImageView
-        android:id="@+id/historyNoItems"
+        android:id="@+id/patientsNoItems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
@@ -30,23 +30,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/historyToolbar" />
+        app:layout_constraintTop_toBottomOf="@id/patientsToolbar" />
 
     <TextView
-        android:id="@+id/noHistoryText"
+        android:id="@+id/patientNoItemsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="No history yet.\nFirstly do some tests!"
+        android:text="No patients yet."
         android:textAppearance="@style/TextAppearance.Bold.18.Black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/historyNoItems" />
+        app:layout_constraintTop_toBottomOf="@id/patientsNoItems" />
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/historyRecycler"
+        android:id="@+id/patientsRecycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipToPadding="false"
@@ -54,7 +54,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/historyToolbar"
+        app:layout_constraintTop_toBottomOf="@id/patientsToolbar"
         tools:itemCount="3"
         tools:listitem="@layout/item_history" />
 

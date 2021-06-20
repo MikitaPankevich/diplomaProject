@@ -3,6 +3,7 @@ package com.demo.diplomaproject.ui.auth.registration
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import com.demo.diplomaproject.R
 import com.demo.diplomaproject.core.BaseFragment

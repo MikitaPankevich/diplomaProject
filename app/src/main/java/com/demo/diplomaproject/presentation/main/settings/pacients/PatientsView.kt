@@ -1,11 +1,13 @@
-package com.demo.diplomaproject.presentation.main.settings
+package com.demo.diplomaproject.presentation.main.settings.pacients
 
 import moxy.MvpView
 import moxy.viewstate.strategy.AddToEndSingleStrategy
+import moxy.viewstate.strategy.OneExecutionStateStrategy
 import moxy.viewstate.strategy.StateStrategyType
 
 @StateStrategyType(AddToEndSingleStrategy::class)
-interface SettingsView : MvpView {
+interface PatientsView : MvpView {
 
-    fun showVersion(versionName: String)
+
+
 }

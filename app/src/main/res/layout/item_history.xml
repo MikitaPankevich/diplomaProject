@@ -28,6 +28,46 @@
         tools:text="15 dB" />
 
     <TextView
+        android:id="@+id/minRmsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Min RMS: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/averageRmsLabel" />
+
+    <TextView
+        android:id="@+id/minRms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        tools:text="14.0"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/minRmsLabel"
+        app:layout_constraintTop_toTopOf="@id/minRmsLabel" />
+
+    <TextView
+        android:id="@+id/maxRmsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Max RMS: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/minRms"
+        app:layout_constraintTop_toTopOf="@id/minRms" />
+
+    <TextView
+        android:id="@+id/maxRms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        tools:text="14.0"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/maxRmsLabel"
+        app:layout_constraintTop_toTopOf="@id/maxRmsLabel" />
+
+    <TextView
         android:id="@+id/resultLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,7 +75,7 @@
         android:text="Result index: "
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/averageRmsLabel" />
+        app:layout_constraintTop_toBottomOf="@id/minRmsLabel" />
 
     <TextView
         android:id="@+id/result"
@@ -51,11 +91,11 @@
         android:id="@+id/dateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:text="Date: "
+        android:layout_marginStart="20dp"
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/resultLabel" />
+        app:layout_constraintStart_toEndOf="@id/result"
+        app:layout_constraintTop_toTopOf="@id/result" />
 
     <TextView
         android:id="@+id/date"

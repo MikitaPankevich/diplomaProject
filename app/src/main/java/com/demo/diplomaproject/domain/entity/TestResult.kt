@@ -9,5 +9,6 @@ data class TestResult(
     @SerializedName("averageRms") val averageRms: String,
     @SerializedName("minRms") val minRms: String,
     @SerializedName("maxRms") val maxRms: String,
-    @SerializedName("qualityIndex") val qualityIndex: String
+    @SerializedName("qualityIndex") val qualityIndex: String,
+    @SerializedName("date") val date: Long,
 ) : Parcelable

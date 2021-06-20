@@ -2,13 +2,11 @@ package com.demo.diplomaproject.di.module
 
 import com.demo.diplomaproject.core.ErrorHandler
 import com.demo.diplomaproject.di.ServerPath
-import com.demo.diplomaproject.di.provider.GsonProvider
 import com.demo.diplomaproject.di.provider.OkHttpClientProvider
 import com.demo.diplomaproject.di.provider.ServerApiProvider
 import com.demo.diplomaproject.domain.interactor.AuthInteractor
 import com.demo.diplomaproject.domain.interactor.DatabaseInteractor
 import com.demo.diplomaproject.model.data.server.ServerApi
-import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import toothpick.config.Module
 

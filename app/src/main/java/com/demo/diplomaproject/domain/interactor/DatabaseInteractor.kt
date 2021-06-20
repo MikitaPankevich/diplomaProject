@@ -7,6 +7,8 @@ import com.demo.diplomaproject.model.data.storage.Prefs
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import io.reactivex.Completable
+import io.reactivex.Single
+import io.reactivex.SingleEmitter
 import javax.inject.Inject
 
 class DatabaseInteractor @Inject constructor(
@@ -78,6 +80,18 @@ class DatabaseInteractor @Inject constructor(
                         }
                     }
                 }
+        }
+            .subscribeOn(schedulers.io())
+            .observeOn(schedulers.ui())
+
+    fun getDoctorList(): Single<List<UserProfile>> =
+        Single.create { emitter: SingleEmitter<List<UserProfile>> ->
+            db.collection(USERS_COLLECTION_NAME)
+                .whereEqualTo("role", "DOCTOR")
+                .get()
+                .addOnSuccessListener {
+                    emitter.onSuccess(it.toObjects(UserProfile::class.java))
+                }.addOnFailureListener(emitter::onError)
         }
             .subscribeOn(schedulers.io())
             .observeOn(schedulers.ui())
