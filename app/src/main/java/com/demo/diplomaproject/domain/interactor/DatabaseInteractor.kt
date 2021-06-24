@@ -6,6 +6,7 @@ import com.demo.diplomaproject.domain.entity.UserProfile
 import com.demo.diplomaproject.model.data.storage.Prefs
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.gson.Gson
 import io.reactivex.Completable
 import io.reactivex.Single
 import io.reactivex.SingleEmitter
@@ -20,18 +21,25 @@ class DatabaseInteractor @Inject constructor(
     private val db = Firebase.firestore
 
     fun getProfile(email: String): Completable =
-        Completable
-            .fromAction {
-                db
-                    .collection(USERS_COLLECTION_NAME)
-                    .document(email)
-                    .get()
-                    .addOnSuccessListener { document ->
-                        document?.let {
-                            prefs.userProfile = it.toObject(UserProfile::class.java)
-                        }
+        Completable.create { emitter ->
+            db
+                .collection(USERS_COLLECTION_NAME)
+                .document(email)
+                .get()
+                .addOnSuccessListener { document ->
+                    document?.let {
+                        prefs.userProfile = it.toObject(UserProfile::class.java)
                     }
-            }
+                    if (!emitter.isDisposed) {
+                        emitter.onComplete()
+                    }
+                }
+                .addOnFailureListener {
+                    if (!emitter.isDisposed) {
+                        emitter.onError(it)
+                    }
+                }
+        }
             .subscribeOn(schedulers.io())
             .observeOn(schedulers.ui())
 
@@ -52,11 +60,11 @@ class DatabaseInteractor @Inject constructor(
     fun updateHistory(testResult: TestResult): Completable {
 
         val history = prefs.historyResults
-        history.add(testResult)
-        prefs.historyResults = history
+        val newHistory = history.plus(testResult)
+        prefs.historyResults = newHistory
 
         val historyList = HashMap<String, Any>()
-        historyList["history"] = history
+        historyList["history"] = newHistory
 
         return Completable.fromAction {
             db.collection(HISTORY_COLLECTION_NAME)
@@ -74,9 +82,11 @@ class DatabaseInteractor @Inject constructor(
                 .get()
                 .addOnSuccessListener { document ->
                     document?.let {
-                        val serverHistory = it.toObject(Array<TestResult>::class.java)
-                        serverHistory?.let { history ->
-                            prefs.historyResults = history.toMutableList()
+                        val serverHistory = it["history"] as java.util.ArrayList<TestResult>?
+                        val historyDTO = Gson().toJson(serverHistory)
+                        val history = Gson().fromJson(historyDTO, Array<TestResult>::class.java).toList()
+                        if (!serverHistory.isNullOrEmpty()) {
+                            prefs.historyResults = history
                         }
                     }
                 }
@@ -91,6 +101,36 @@ class DatabaseInteractor @Inject constructor(
                 .get()
                 .addOnSuccessListener {
                     emitter.onSuccess(it.toObjects(UserProfile::class.java))
+                }.addOnFailureListener(emitter::onError)
+        }
+            .subscribeOn(schedulers.io())
+            .observeOn(schedulers.ui())
+
+    fun getPatientsList(): Single<List<UserProfile>> =
+        Single.create { emitter: SingleEmitter<List<UserProfile>> ->
+            db.collection(USERS_COLLECTION_NAME)
+                .whereEqualTo("currentDoctor", authInteractor.getProfile()?.email)
+                .get()
+                .addOnSuccessListener {
+                    emitter.onSuccess(it.toObjects(UserProfile::class.java))
+                }.addOnFailureListener(emitter::onError)
+        }
+            .subscribeOn(schedulers.io())
+            .observeOn(schedulers.ui())
+
+    fun getPatientsHistory(email: String): Single<List<TestResult>> =
+        Single.create { emitter: SingleEmitter<List<TestResult>> ->
+            db.collection(HISTORY_COLLECTION_NAME)
+                .document(email)
+                .get()
+                .addOnSuccessListener {
+                    val serverHistory = it["history"] as java.util.ArrayList<HashMap<String, String>>?
+                    if (serverHistory.isNullOrEmpty()) {
+                        emitter.onSuccess(emptyList())
+                    } else {
+                        val historyDTO = Gson().toJson(serverHistory)
+                        emitter.onSuccess(Gson().fromJson(historyDTO, Array<TestResult>::class.java).toList())
+                    }
                 }.addOnFailureListener(emitter::onError)
         }
             .subscribeOn(schedulers.io())

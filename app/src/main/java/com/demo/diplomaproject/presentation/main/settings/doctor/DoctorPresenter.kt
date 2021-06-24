@@ -33,6 +33,8 @@ class DoctorPresenter @Inject constructor(
                     {}
                 )
                 .connect()
+        } else {
+            viewState.showNoDoctorView()
         }
     }
 

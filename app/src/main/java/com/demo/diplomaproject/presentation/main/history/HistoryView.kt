@@ -10,5 +10,5 @@ import moxy.viewstate.strategy.StateStrategyType
 interface HistoryView : MvpView {
 
     @StateStrategyType(OneExecutionStateStrategy::class)
-    fun showHistory(history: MutableList<TestResult>)
+    fun showHistory(history: List<TestResult>)
 }

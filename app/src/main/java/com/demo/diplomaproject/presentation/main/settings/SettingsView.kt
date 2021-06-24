@@ -8,4 +8,6 @@ import moxy.viewstate.strategy.StateStrategyType
 interface SettingsView : MvpView {
 
     fun showVersion(versionName: String)
+
+    fun shouldShowPatientUI(shouldShow: Boolean)
 }

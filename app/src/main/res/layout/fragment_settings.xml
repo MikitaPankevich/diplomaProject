@@ -78,7 +78,7 @@
         android:background="@color/dark_gray" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/settingsThemes"
+        android:id="@+id/settingsPatients"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -87,18 +87,10 @@
         android:padding="16dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="Theme"
+        android:text="Patients list"
         android:textAppearance="@style/TextAppearance.Medium.18"
         android:textColor="@color/black"
         app:iconTint="@color/black" />
-
-    <View
-        android:id="@+id/themesButtonDivider"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@color/dark_gray" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/settingsAboutDoctor"

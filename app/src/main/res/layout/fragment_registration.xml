@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:text="Регистрация"
+                android:text="Registration"
                 android:textAppearance="@style/TextAppearance.Bold.26"
                 app:layout_constraintBottom_toBottomOf="@id/registrationLogo"
                 app:layout_constraintStart_toEndOf="@id/registrationLogo"
@@ -65,7 +65,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Электронная почта"
+                        android:hint="Email address"
                         android:imeOptions="actionNext"
                         android:inputType="textEmailAddress" />
 
@@ -87,7 +87,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Пароль"
+                        android:hint="Password"
                         android:imeOptions="actionNext"
                         android:inputType="textPassword" />
 
@@ -109,7 +109,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Повторите пароль"
+                        android:hint="Repeat password"
                         android:imeOptions="actionNext"
                         android:inputType="textPassword" />
 
@@ -131,7 +131,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Имя"
+                        android:hint="Name"
                         android:imeOptions="actionNext"
                         android:inputType="textEmailAddress" />
 
@@ -153,7 +153,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Фамилия"
+                        android:hint="Surname"
                         android:imeOptions="actionDone"
                         android:inputType="textEmailAddress" />
 
@@ -167,7 +167,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
-                    android:hint="Выберите вашу роль"
+                    android:hint="Choose your role"
                     android:paddingStart="5dp"
                     android:textColorHint="@color/dark_gray"
                     app:boxBackgroundColor="@color/white">
@@ -203,7 +203,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Стаж работы"
+                        android:hint="Work experience"
                         android:imeOptions="actionNext"
                         android:inputType="textAutoComplete" />
 
@@ -226,7 +226,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Образование"
+                        android:hint="Education"
                         android:imeOptions="actionNext"
                         android:inputType="textAutoComplete" />
 
@@ -242,7 +242,7 @@
                 android:layout_marginHorizontal="80dp"
                 android:layout_marginTop="50dp"
                 android:gravity="center"
-                android:text="Зарегистрироваться"
+                android:text="Register"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/registrationContainer" />
@@ -252,7 +252,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="У вас уже есть аккаунт ?"
+                android:text="You already have account ?"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/registrationButton" />
@@ -263,7 +263,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:paddingBottom="30dp"
-                android:text="Войти"
+                android:text="Login"
                 android:textAppearance="@style/TextAppearance.Bold.16.BlueNukeEnd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

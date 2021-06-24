@@ -50,7 +50,8 @@ class LoginPresenter @Inject constructor(
                         databaseInteractor
                             .getProfile(email)
                             .subscribe(
-                                { flowRouter.newRootScreen(Screens.MainFlow)},
+                                {
+                                    flowRouter.newRootScreen(Screens.MainFlow)},
                                 { errorHandler.handleError(it) }
                             )
                         databaseInteractor.getHistory(email).subscribe({},{})

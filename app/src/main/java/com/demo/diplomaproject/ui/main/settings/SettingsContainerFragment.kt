@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.View
 import com.demo.diplomaproject.R
 import com.demo.diplomaproject.core.BaseFragment
+import com.demo.diplomaproject.extensions.gone
+import com.demo.diplomaproject.extensions.visible
 import com.demo.diplomaproject.presentation.main.settings.SettingsPresenter
 import com.demo.diplomaproject.presentation.main.settings.SettingsView
 import kotlinx.android.synthetic.main.fragment_settings.*
@@ -30,10 +32,22 @@ class SettingsContainerFragment : BaseFragment(), SettingsView {
         super.onViewCreated(view, savedInstanceState)
 
         settingsAboutDoctor.setOnClickListener { presenter.onAboutDoctorClicked() }
+        settingsPatients.setOnClickListener { presenter.onPatientsListClicked() }
         settingsToolbarImage.setOnClickListener { presenter.onLogoutClicked() }
     }
 
     override fun showVersion(versionName: String) {
         versionNameText.text = versionName
+    }
+
+    override fun shouldShowPatientUI(shouldShow: Boolean) {
+        if (shouldShow) {
+            settingsAboutDoctor.visible()
+            settingsPatients.gone()
+        } else {
+            settingsPatients.visible()
+            settingsAboutDoctor.gone()
+        }
+
     }
 }

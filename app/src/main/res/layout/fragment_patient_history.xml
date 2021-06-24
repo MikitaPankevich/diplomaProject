@@ -10,7 +10,8 @@
         android:id="@+id/patientHistoryToolbar"
         style="@style/Widget.Toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back">
 
         <TextView
             android:id="@+id/patientHistoryToolbarText"
@@ -26,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
+        android:visibility="gone"
         android:src="@drawable/ic_no_history"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
+        android:visibility="gone"
         android:text="No history yet."
         android:textAppearance="@style/TextAppearance.Bold.18.Black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,11 +50,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/patientHistoryRecycler"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:clipToPadding="false"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/patientHistoryToolbar"

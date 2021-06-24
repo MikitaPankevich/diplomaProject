@@ -38,6 +38,7 @@ class DoctorFragment : BaseFragment(), DoctorView {
 
         doctorFindButton.setOnClickListener { presenter.onFindDoctorClicked() }
         doctorRecycler.layoutManager = LinearLayoutManager(requireContext())
+        doctorToolbar.setNavigationOnClickListener { presenter.onBackPressed() }
     }
 
     override fun showDoctorList(doctors: List<UserProfile>) {
@@ -64,7 +65,7 @@ class DoctorFragment : BaseFragment(), DoctorView {
         doctorNotFoundText.gone()
         doctorNotFoundImage.gone()
         doctorRecycler.gone()
-        currentDoctorContainer.visibility
+        currentDoctorContainer.visible()
         currentDoctorName.text = doctor.name
         currentDoctorSurname.text = doctor.surname
         currentDoctorUniversity.text = doctor.university

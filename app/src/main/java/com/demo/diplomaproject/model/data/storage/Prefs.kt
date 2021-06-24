@@ -36,11 +36,11 @@ class Prefs @Inject constructor(
             appPrefs.edit().putString(USER_PROFILE, gson.toJson(user)).apply()
         }
 
-    var historyResults: MutableList<TestResult>
+    var historyResults: List<TestResult>
         get() {
             val history = appPrefs.getString(HISTORY, null)
             return if (history != null) {
-                gson.fromJson(history, Array<TestResult>::class.java).toMutableList()
+                gson.fromJson(history, Array<TestResult>::class.java).toList()
             } else {
                 arrayListOf()
             }
@@ -51,6 +51,7 @@ class Prefs @Inject constructor(
 
     fun clearUserData() {
         userProfile = null
+        historyResults = listOf()
     }
 
     companion object {

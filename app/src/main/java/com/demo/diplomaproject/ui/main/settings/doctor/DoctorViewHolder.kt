@@ -13,8 +13,8 @@ class DoctorViewHolder(
     override val containerView = itemView
 
     fun bind(userProfile: UserProfile) {
-        itemName.text = userProfile.name.orEmpty()
-        itemSurname. text = userProfile.surname.orEmpty()
+        itemName.text = userProfile.name
+        itemSurname. text = userProfile.surname
         itemUniversity.text = userProfile.university.orEmpty()
         itemExperience.text = userProfile.experience.orEmpty()
     }

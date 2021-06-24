@@ -8,7 +8,6 @@ import moxy.viewstate.strategy.StateStrategyType
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface RegistrationView : MvpView {
 
-
     fun showProgress(shouldShow: Boolean)
 
     @StateStrategyType(OneExecutionStateStrategy::class)
@@ -36,5 +35,5 @@ interface RegistrationView : MvpView {
     fun showUniversityEmptyErrorMessage(message: String)
 
     @StateStrategyType(OneExecutionStateStrategy::class)
-    fun showErrorDialog(message: String)
+    fun showErrorMessage(message: String)
 }

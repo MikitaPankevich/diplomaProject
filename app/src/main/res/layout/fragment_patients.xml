@@ -10,14 +10,15 @@
         android:id="@+id/patientsToolbar"
         style="@style/Widget.Toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back">
 
         <TextView
             android:id="@+id/patientsToolbarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="History"
+            android:text="Patients"
             android:textAppearance="@style/TextAppearance.Bold.20.White" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -27,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
         android:src="@drawable/ic_no_history"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +42,7 @@
         android:gravity="center"
         android:text="No patients yet."
         android:textAppearance="@style/TextAppearance.Bold.18.Black"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/patientsNoItems" />
@@ -47,15 +50,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/patientsRecycler"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:clipToPadding="false"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/patientsToolbar"
         tools:itemCount="3"
-        tools:listitem="@layout/item_history" />
+        tools:listitem="@layout/item_patient" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

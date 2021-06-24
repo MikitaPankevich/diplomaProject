@@ -22,9 +22,9 @@ class DoctorAdapter(
 
         view.setOnClickListener {
             val position = holder.adapterPosition
-            val catalog = doctors[position]
+            val doctor = doctors[position]
             if (position != RecyclerView.NO_POSITION) {
-                itemClickListener.invoke(catalog.email)
+                itemClickListener.invoke(doctor.email)
             }
         }
         return holder

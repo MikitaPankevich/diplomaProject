@@ -42,7 +42,7 @@ class RegistrationFragment : BaseFragment(), RegistrationView {
     }
 
     override fun showProgress(shouldShow: Boolean) {
-        val a = 1
+        loginProgress.showProgress(shouldShow)
     }
 
     override fun showEmailErrorMessage(message: String) {
@@ -85,8 +85,8 @@ class RegistrationFragment : BaseFragment(), RegistrationView {
         universityLayout.isErrorEnabled = true
     }
 
-    override fun showErrorDialog(message: String) {
-        val a = message
+    override fun showErrorMessage(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     private fun onRegisterClicked() {
@@ -103,12 +103,12 @@ class RegistrationFragment : BaseFragment(), RegistrationView {
     }
 
     private fun initViews() {
-        val items = listOf("Пациент", "Доктор")
+        val items = listOf("Patient", "Doctor")
         val adapter = ArrayAdapter(requireContext(), R.layout.menu_item, items)
         roleMenu?.setAdapter(adapter)
         roleMenu?.addTextChangedListener {
             it?.let { role ->
-                if (role.toString() == "Доктор") {
+                if (role.toString() == "Doctor") {
                     workExperienceLayout.visible()
                     universityLayout.visible()
                 } else {

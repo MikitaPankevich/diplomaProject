@@ -67,24 +67,24 @@ class RegistrationPresenter @Inject constructor(
         } else true
 
         val isNameFilled = if (name.isEmpty()) {
-            viewState.showNameEmptyErrorMessage("Поле должно быть заполнено")
+            viewState.showNameEmptyErrorMessage("Field should be filled")
             false
         } else true
 
         val isSurnameFilled = if (surname.isEmpty()) {
-            viewState.showSurnameEmptyErrorMessage("Поле должно быть заполнено")
+            viewState.showSurnameEmptyErrorMessage("Field should be filled")
             false
         } else true
 
         val userRole = when (role) {
-            "Доктор" -> ParticipateType.DOCTOR
-            "Пациент" -> ParticipateType.PATIENT
+            "Doctor" -> ParticipateType.DOCTOR
+            "Patient" -> ParticipateType.PATIENT
             else -> ParticipateType.CLEAR
         }
         val isRoleFilled = if (userRole != ParticipateType.CLEAR) {
             true
         } else {
-            viewState.showRoleEmptyErrorMessage("Поле должно быть заполнено")
+            viewState.showRoleEmptyErrorMessage("Field should be filled")
             false
         }
 
@@ -94,7 +94,7 @@ class RegistrationPresenter @Inject constructor(
                 if (experience.isNotEmpty()) {
                     true
                 } else {
-                    viewState.showExperienceEmptyErrorMessage("Поле должно быть заполнено")
+                    viewState.showExperienceEmptyErrorMessage("Field should be filled")
                     false
                 }
             }
@@ -107,7 +107,7 @@ class RegistrationPresenter @Inject constructor(
                 if (university.isNotEmpty()) {
                     true
                 } else {
-                    viewState.showUniversityEmptyErrorMessage("Поле должно быть заполнено")
+                    viewState.showUniversityEmptyErrorMessage("Field should be filled")
                     false
                 }
             }
@@ -135,10 +135,10 @@ class RegistrationPresenter @Inject constructor(
                         )
                             .subscribe(
                                 { flowRouter.newRootScreen(Screens.MainFlow) },
-                                { ex -> errorHandler.handleError(ex) { viewState.showErrorDialog(it) } }
+                                { ex -> errorHandler.handleError(ex) { viewState.showErrorMessage(it) } }
                             )
                     },
-                    { ex -> errorHandler.handleError(ex) { viewState.showErrorDialog(it) } }
+                    { ex -> errorHandler.handleError(ex) { viewState.showErrorMessage(it) } }
                 )
                 .connect()
         }

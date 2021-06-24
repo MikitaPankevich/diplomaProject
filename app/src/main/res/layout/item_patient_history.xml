@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/patientAverageRmsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average sound level: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/patientAverageRms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/patientAverageRmsLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="15 dB" />
+
+    <TextView
+        android:id="@+id/patientMinRmsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Min RMS: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patientAverageRmsLabel" />
+
+    <TextView
+        android:id="@+id/patientMinRms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        tools:text="14.0"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/patientMinRmsLabel"
+        app:layout_constraintTop_toTopOf="@id/patientMinRmsLabel" />
+
+    <TextView
+        android:id="@+id/patientMaxRmsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Max RMS: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/patientMinRms"
+        app:layout_constraintTop_toTopOf="@id/patientMinRmsLabel" />
+
+    <TextView
+        android:id="@+id/patientMaxRms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        tools:text="14.0"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/patientMaxRmsLabel"
+        app:layout_constraintTop_toTopOf="@id/patientMaxRmsLabel" />
+
+    <TextView
+        android:id="@+id/patientResultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Result index: "
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patientMinRmsLabel" />
+
+    <TextView
+        android:id="@+id/patientResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/patientResultLabel"
+        app:layout_constraintTop_toTopOf="@id/patientResultLabel"
+        tools:text="18.8" />
+
+    <TextView
+        android:id="@+id/patientDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:layout_marginStart="20dp"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/patientResult"
+        app:layout_constraintTop_toTopOf="@id/patientResultLabel" />
+
+    <TextView
+        android:id="@+id/patientDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/patientDateLabel"
+        app:layout_constraintTop_toTopOf="@id/patientDateLabel"
+        tools:text="19-02-2020" />
+
+    <View
+        android:id="@+id/patientDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue_nuke_end"
+        app:layout_constraintTop_toBottomOf="@id/patientDateLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

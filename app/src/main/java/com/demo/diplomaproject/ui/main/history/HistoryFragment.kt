@@ -42,7 +42,7 @@ class HistoryFragment : BaseFragment(), HistoryView {
         presenter.onBackPressed()
     }
 
-    override fun showHistory(history: MutableList<TestResult>) {
+    override fun showHistory(history: List<TestResult>) {
         historyRecycler.visible()
         noHistoryText.gone()
         historyNoItems.gone()

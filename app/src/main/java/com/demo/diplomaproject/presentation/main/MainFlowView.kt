@@ -8,8 +8,10 @@ import moxy.viewstate.strategy.StateStrategyType
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface MainFlowView : MvpView {
 
+    @StateStrategyType(OneExecutionStateStrategy::class)
     fun changeBottomTab(fragment: String)
 
+    @StateStrategyType(OneExecutionStateStrategy::class)
     fun replaceFragment(tag: String)
 
     @StateStrategyType(OneExecutionStateStrategy::class)

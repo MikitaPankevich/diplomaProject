@@ -38,6 +38,7 @@ class MainFlowFragment : FlowFragment(), MainFlowView, MainFlowNavigationListene
         super.onCreate(savedInstanceState)
 
         currentTabTag = savedInstanceState?.getString(CURRENT_TAB_TAG) ?: VOICE_TAB_TAG
+        isFirstTime = savedInstanceState?.getBoolean(IS_FIRST_TIME) ?: true
 
         presenter.onCreate(isFirstTime)
     }

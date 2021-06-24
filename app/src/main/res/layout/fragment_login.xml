@@ -19,7 +19,7 @@
         android:id="@+id/loginHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вход"
+        android:text="Login"
         android:textAppearance="@style/TextAppearance.Bold.26"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toEndOf="@id/loginLogo"
@@ -57,7 +57,7 @@
                 style="@style/Widget.TextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Электронная почта"
+                android:hint="Email address"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress" />
 
@@ -79,7 +79,7 @@
                 style="@style/Widget.TextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Пароль"
+                android:hint="Password"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword" />
 
@@ -95,7 +95,7 @@
         android:layout_marginHorizontal="80dp"
         android:layout_marginTop="100dp"
         android:gravity="center"
-        android:text="Войти"
+        android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginContainer" />
@@ -105,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="У вас нет аккаунта ?"
+        android:text="You dont have account yet ?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Зарегистрироваться"
+        android:text="Registration"
         android:textAppearance="@style/TextAppearance.Bold.16.BlueNukeEnd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

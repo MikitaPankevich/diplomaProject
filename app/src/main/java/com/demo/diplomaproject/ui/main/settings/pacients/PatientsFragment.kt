@@ -15,13 +15,14 @@ import com.demo.diplomaproject.presentation.main.settings.pacients.PatientsPrese
 import com.demo.diplomaproject.presentation.main.settings.pacients.PatientsView
 import com.demo.diplomaproject.ui.main.settings.doctor.DoctorAdapter
 import kotlinx.android.synthetic.main.fragment_about_doctor.*
+import kotlinx.android.synthetic.main.fragment_patients.*
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
 import toothpick.Scope
 
 class PatientsFragment : BaseFragment(), PatientsView {
 
-    override val layoutRes = R.layout.fragment_about_doctor
+    override val layoutRes = R.layout.fragment_patients
 
     override fun installScopeModules(scope: Scope) {}
 
@@ -30,7 +31,7 @@ class PatientsFragment : BaseFragment(), PatientsView {
     @InjectPresenter
     lateinit var presenter: PatientsPresenter
 
-    private lateinit var adapter: DoctorAdapter
+    private lateinit var adapter: PatientsAdapter
 
     @ProvidePresenter
     fun providePresenter(): PatientsPresenter =
@@ -39,8 +40,23 @@ class PatientsFragment : BaseFragment(), PatientsView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-            //doctorFindButton.setOnClickListener { presenter.onFindDoctorClicked() }
-        doctorRecycler.layoutManager = LinearLayoutManager(requireContext())
+        patientsRecycler.layoutManager = LinearLayoutManager(requireContext())
+        patientsToolbar.setNavigationOnClickListener { presenter.onBackPressed() }
+    }
+
+    override fun showPatients(patients: List<UserProfile>) {
+        patientsRecycler.visible()
+        patientNoItemsText.gone()
+        patientsNoItems.gone()
+        adapter = PatientsAdapter { presenter.onPatientChosen(it) }
+        patientsRecycler.adapter = adapter
+        adapter.showPatients(patients)
+    }
+
+    override fun showError() {
+        patientsRecycler.gone()
+        patientNoItemsText.visible()
+        patientsNoItems.visible()
     }
 
     override fun onBackPressed() {
