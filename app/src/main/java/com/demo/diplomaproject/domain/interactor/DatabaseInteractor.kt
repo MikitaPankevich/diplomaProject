@@ -83,9 +83,9 @@ class DatabaseInteractor @Inject constructor(
                 .addOnSuccessListener { document ->
                     document?.let {
                         val serverHistory = it["history"] as java.util.ArrayList<TestResult>?
-                        val historyDTO = Gson().toJson(serverHistory)
-                        val history = Gson().fromJson(historyDTO, Array<TestResult>::class.java).toList()
                         if (!serverHistory.isNullOrEmpty()) {
+                            val historyDTO = Gson().toJson(serverHistory)
+                            val history = Gson().fromJson(historyDTO, Array<TestResult>::class.java).toList()
                             prefs.historyResults = history
                         }
                     }

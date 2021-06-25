@@ -50,10 +50,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/patientShowHistoryButton"
         style="@style/Widget.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginHorizontal="110dp"
         android:gravity="center"
         android:text="@string/patient_show_history"
         app:layout_constraintEnd_toEndOf="parent"
