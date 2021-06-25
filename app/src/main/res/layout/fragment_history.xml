@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="History"
+            android:text="@string/history_toolbar"
             android:textAppearance="@style/TextAppearance.Bold.20.White" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="No history yet.\nFirstly do some tests!"
+        android:text="@string/history_no_history"
         android:textAppearance="@style/TextAppearance.Bold.18.Black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

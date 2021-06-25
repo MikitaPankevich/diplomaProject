@@ -12,7 +12,7 @@
         android:id="@+id/averageRmsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Average sound level: "
+        android:text="@string/item_history_average"
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,14 +25,25 @@
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toEndOf="@id/averageRmsLabel"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="15 dB" />
+        tools:text="15" />
+
+    <TextView
+        android:id="@+id/averageRmsPostfix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/item_history_db"
+        android:textAppearance="@style/TextAppearance.Regular.18.Black"
+        app:layout_constraintStart_toEndOf="@id/averageRms"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="dB" />
 
     <TextView
         android:id="@+id/minRmsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Min RMS: "
+        android:text="@string/item_history_min_rms"
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/averageRmsLabel" />
@@ -52,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="Max RMS: "
+        android:text="@string/item_history_max_rms"
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toEndOf="@id/minRms"
         app:layout_constraintTop_toTopOf="@id/minRms" />
@@ -72,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Result index: "
+        android:text="@string/item_history_result"
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/minRmsLabel" />
@@ -91,7 +102,7 @@
         android:id="@+id/dateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date: "
+        android:text="@string/item_history_date"
         android:layout_marginStart="20dp"
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toEndOf="@id/result"

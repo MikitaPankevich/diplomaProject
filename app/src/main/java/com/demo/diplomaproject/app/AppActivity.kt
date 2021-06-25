@@ -1,5 +1,6 @@
 package com.demo.diplomaproject.app
 
+import android.content.Context
 import android.os.Bundle
 import com.demo.diplomaproject.R
 import com.demo.diplomaproject.app.presentation.AppPresenter
@@ -7,6 +8,7 @@ import com.demo.diplomaproject.app.presentation.AppView
 import com.demo.diplomaproject.core.AnimatedSupportAppNavigator
 import com.demo.diplomaproject.core.BaseFragment
 import com.demo.diplomaproject.di.DI
+import com.demo.diplomaproject.domain.interactor.LanguageInteractor
 import kotlinx.android.synthetic.main.activity_app.*
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
@@ -34,6 +36,11 @@ class AppActivity : MvpAppCompatActivity(), AppView {
     fun providePresenter(): AppPresenter =
         Toothpick.openScope(DI.SERVER_SCOPE).getInstance(AppPresenter::class.java)
 
+    override fun attachBaseContext(newBase: Context) {
+        val newContext = configureContext(newBase)
+        super.attachBaseContext(newContext)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         Toothpick.inject(this, Toothpick.openScope(DI.SERVER_SCOPE))
 
@@ -43,13 +50,11 @@ class AppActivity : MvpAppCompatActivity(), AppView {
 
         if (savedInstanceState == null) {
             appContainer.postDelayed(
-                {
-                    presenter.onAppStarted()
-                    window.setBackgroundDrawableResource(R.color.white)
-                },
+                { presenter.onAppStarted() },
                 SHOW_LOGO_DELAY
             )
         }
+        window.setBackgroundDrawableResource(R.color.white)
     }
 
     override fun onResumeFragments() {
@@ -72,6 +77,12 @@ class AppActivity : MvpAppCompatActivity(), AppView {
 
     override fun onBackPressed() {
         currentFragment?.onBackPressed() ?: presenter.onBackPressed()
+    }
+
+    private fun configureContext(context: Context): Context {
+        val languageInteractor =
+            Toothpick.openScope(DI.SERVER_SCOPE).getInstance(LanguageInteractor::class.java)
+        return languageInteractor.configureContextBasedOnLanguage(context)
     }
 
     companion object {

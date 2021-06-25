@@ -1,7 +1,9 @@
 package com.demo.diplomaproject.presentation.main.voice.test.result
 
+import com.demo.diplomaproject.R
 import com.demo.diplomaproject.core.BasePresenter
 import com.demo.diplomaproject.core.FlowRouter
+import com.demo.diplomaproject.core.ResourceManager
 import com.demo.diplomaproject.core.Screens
 import com.demo.diplomaproject.domain.entity.TestResult
 import com.demo.diplomaproject.domain.interactor.DatabaseInteractor
@@ -14,21 +16,22 @@ import javax.inject.Inject
 class ResultPresenter @Inject constructor(
     private val router: Router,
     private val testResult: TestResult,
-    private val databaseInteractor: DatabaseInteractor
+    private val databaseInteractor: DatabaseInteractor,
+    private val resourceManager: ResourceManager,
 ) : BasePresenter<ResultView>() {
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
-        val messageDescription = if (testResult.qualityIndex.toDouble() < 3.5) {
-            "The test found significant changes in your voice that can be caused by a serious condition in the larynx."
+        val messageDescription = if (testResult.qualityIndex.toDouble() < 4.0) {
+            resourceManager.getString(R.string.test_result_bad)
         } else {
-            "The test did not reveal any abnormalities"
+            resourceManager.getString(R.string.test_result_good)
         }
-        val messageSuggestion = if (testResult.qualityIndex.toDouble() < 3.5) {
-            "You need to visit an otolaryngologist"
+        val messageSuggestion = if (testResult.qualityIndex.toDouble() < 4.0) {
+            resourceManager.getString(R.string.test_suggestion_bad)
         } else {
-            "Everything is fine"
+            resourceManager.getString(R.string.test_suggestion_good)
         }
         viewState.showResult(testResult.qualityIndex, messageDescription, messageSuggestion)
         databaseInteractor.updateHistory(testResult).subscribe({},{}).connect()

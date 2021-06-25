@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:text="Registration"
+                android:text="@string/registration_title"
                 android:textAppearance="@style/TextAppearance.Bold.26"
                 app:layout_constraintBottom_toBottomOf="@id/registrationLogo"
                 app:layout_constraintStart_toEndOf="@id/registrationLogo"
@@ -65,7 +65,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Email address"
+                        android:hint="@string/registration_email_address"
                         android:imeOptions="actionNext"
                         android:inputType="textEmailAddress" />
 
@@ -87,7 +87,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Password"
+                        android:hint="@string/registration_password"
                         android:imeOptions="actionNext"
                         android:inputType="textPassword" />
 
@@ -109,7 +109,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Repeat password"
+                        android:hint="@string/registration_repeat_password"
                         android:imeOptions="actionNext"
                         android:inputType="textPassword" />
 
@@ -131,7 +131,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Name"
+                        android:hint="@string/registration_name"
                         android:imeOptions="actionNext"
                         android:inputType="textEmailAddress" />
 
@@ -153,7 +153,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Surname"
+                        android:hint="@string/registration_surname"
                         android:imeOptions="actionDone"
                         android:inputType="textEmailAddress" />
 
@@ -167,7 +167,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
-                    android:hint="Choose your role"
+                    android:hint="@string/registration_choose_your_role"
                     android:paddingStart="5dp"
                     android:textColorHint="@color/dark_gray"
                     app:boxBackgroundColor="@color/white">
@@ -203,7 +203,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Work experience"
+                        android:hint="@string/registration_work_experience"
                         android:imeOptions="actionNext"
                         android:inputType="textAutoComplete" />
 
@@ -226,7 +226,7 @@
                         style="@style/Widget.TextInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Education"
+                        android:hint="@string/registration_education"
                         android:imeOptions="actionNext"
                         android:inputType="textAutoComplete" />
 
@@ -242,7 +242,7 @@
                 android:layout_marginHorizontal="80dp"
                 android:layout_marginTop="50dp"
                 android:gravity="center"
-                android:text="Register"
+                android:text="@string/registration_register"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/registrationContainer" />
@@ -252,7 +252,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="You already have account ?"
+                android:text="@string/registration_already_have_account"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/registrationButton" />
@@ -263,7 +263,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:paddingBottom="30dp"
-                android:text="Login"
+                android:text="@string/registration_login"
                 android:textAppearance="@style/TextAppearance.Bold.16.BlueNukeEnd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

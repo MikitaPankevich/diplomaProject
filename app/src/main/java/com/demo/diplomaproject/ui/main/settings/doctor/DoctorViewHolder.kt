@@ -14,7 +14,7 @@ class DoctorViewHolder(
 
     fun bind(userProfile: UserProfile) {
         itemName.text = userProfile.name
-        itemSurname. text = userProfile.surname
+        itemSurname.text = userProfile.surname
         itemUniversity.text = userProfile.university.orEmpty()
         itemExperience.text = userProfile.experience.orEmpty()
     }

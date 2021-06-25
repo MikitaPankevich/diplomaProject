@@ -6,6 +6,7 @@ import com.demo.diplomaproject.core.ResourceManager
 import com.demo.diplomaproject.core.global.scheduler.AppSchedulers
 import com.demo.diplomaproject.core.global.scheduler.SchedulersProvider
 import com.demo.diplomaproject.di.provider.GsonProvider
+import com.demo.diplomaproject.domain.interactor.LanguageInteractor
 import com.google.gson.Gson
 import ru.terrakok.cicerone.Cicerone
 import ru.terrakok.cicerone.NavigatorHolder
@@ -26,6 +27,8 @@ class AppModule(
         bind(Gson::class.java)
             .toProvider(GsonProvider::class.java)
             .providesSingletonInScope()
+        bind(LanguageInteractor::class.java)
+            .singletonInScope()
 
         // Navigation
         val cicerone = Cicerone.create()

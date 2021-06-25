@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="Settings"
+            android:text="@string/settings_toolbar"
             android:textAppearance="@style/TextAppearance.Bold.20.White" />
 
         <ImageButton
@@ -41,7 +41,7 @@
         android:padding="16dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="Profile"
+        android:text="@string/settings_profile"
         android:textAppearance="@style/TextAppearance.Medium.18"
         android:textColor="@color/black"
         app:iconTint="@color/black" />
@@ -64,7 +64,7 @@
         android:padding="16dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="Language"
+        android:text="@string/settings_language"
         android:textAppearance="@style/TextAppearance.Medium.18"
         android:textColor="@color/black"
         app:iconTint="@color/black" />
@@ -87,7 +87,7 @@
         android:padding="16dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="Patients list"
+        android:text="@string/settings_patients_list"
         android:textAppearance="@style/TextAppearance.Medium.18"
         android:textColor="@color/black"
         app:iconTint="@color/black" />
@@ -101,7 +101,7 @@
         android:gravity="start|center_vertical"
         android:padding="16dp"
         android:paddingStart="20dp"
-        android:text="About doctor"
+        android:text="@string/settings_about_doctor"
         android:textAppearance="@style/TextAppearance.Medium.18"
         android:textColor="@color/black" />
 
@@ -128,7 +128,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="Version: "
+            android:text="@string/settings_version"
             android:textAppearance="@style/TextAppearance.Medium.18" />
 
         <TextView

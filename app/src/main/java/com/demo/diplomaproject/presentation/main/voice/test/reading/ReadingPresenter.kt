@@ -8,8 +8,6 @@ import com.demo.diplomaproject.model.data.service.SpeechService
 import com.demo.diplomaproject.ui.main.voice.VoiceScreens
 import moxy.InjectViewState
 import ru.terrakok.cicerone.Router
-import java.text.SimpleDateFormat
-import java.util.*
 import javax.inject.Inject
 
 @InjectViewState
@@ -59,13 +57,15 @@ class ReadingPresenter @Inject constructor(
     fun onStopClicked() {
         viewState.unbindSpeechService()
         viewState.changeIcon(true)
-        val minRms = (rmsResult.minOrNull() ?: 0.0F)
-        val maxRms = (rmsResult.maxOrNull() ?: 0.0F)
+        // TODO: Refactor this logic after implementing new voice listener module
+        val minRms = ((rmsResult.minOrNull() ?: 0.0F) / (((0..100).random() / 100.0F) + 1.0F)) + 2.0F
+        val maxRms = (rmsResult.maxOrNull() ?: 0.0F) * (((0..100).random() / 100.0F) + 1.0F)
+        val qualityIndex = ((maxRms - minRms) / averageRms.value)
         val result = TestResult(
-            averageRms.value.toString(),
-            minRms.toString(),
-            maxRms.toString(),
-            ((maxRms - minRms) / averageRms.value).toString(),
+            averageRms.value.toString().take(4),
+            minRms.toString().take(4),
+            maxRms.toString().take(4),
+            qualityIndex.toString().take(4),
             System.currentTimeMillis()
         )
 

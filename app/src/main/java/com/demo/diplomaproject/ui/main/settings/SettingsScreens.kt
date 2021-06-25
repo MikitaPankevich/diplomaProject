@@ -7,7 +7,6 @@ import com.demo.diplomaproject.ui.main.settings.pacients.PatientsFragment
 import com.demo.diplomaproject.ui.main.settings.pacients.history.PatientsHistoryFragment
 import com.demo.diplomaproject.ui.main.settings.profile.ProfileFragment
 import com.demo.diplomaproject.ui.main.settings.theme.ThemeFragment
-import com.demo.diplomaproject.ui.main.voice.test.ReadingFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 
 object SettingsScreens {

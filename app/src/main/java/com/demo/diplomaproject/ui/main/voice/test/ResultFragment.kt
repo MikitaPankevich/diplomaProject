@@ -6,12 +6,8 @@ import androidx.core.os.bundleOf
 import com.demo.diplomaproject.R
 import com.demo.diplomaproject.core.BaseFragment
 import com.demo.diplomaproject.di.DI
-import com.demo.diplomaproject.di.PrimitiveWrapper
 import com.demo.diplomaproject.domain.entity.TestResult
-import com.demo.diplomaproject.extensions.tryToGetLong
 import com.demo.diplomaproject.extensions.tryToGetParcelable
-import com.demo.diplomaproject.presentation.main.settings.doctor.DoctorPresenter
-import com.demo.diplomaproject.presentation.main.settings.doctor.DoctorView
 import com.demo.diplomaproject.presentation.main.voice.test.result.ResultPresenter
 import com.demo.diplomaproject.presentation.main.voice.test.result.ResultView
 import kotlinx.android.synthetic.main.fragment_result.*
@@ -29,7 +25,9 @@ class ResultFragment : BaseFragment(), ResultView {
     override fun installScopeModules(scope: Scope) {
         val result = tryToGetParcelable<TestResult>(KEY_RESULT)
         scope.installModules(object : Module() {
-            init { bind(TestResult::class.java).toInstance(result) }
+            init {
+                bind(TestResult::class.java).toInstance(result)
+            }
         })
     }
 

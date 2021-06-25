@@ -4,7 +4,6 @@ import com.demo.diplomaproject.core.BasePresenter
 import com.demo.diplomaproject.core.ErrorHandler
 import com.demo.diplomaproject.core.Screens
 import com.demo.diplomaproject.domain.interactor.AuthInteractor
-import com.demo.diplomaproject.ui.auth.AuthScreens
 import ru.terrakok.cicerone.Router
 import javax.inject.Inject
 

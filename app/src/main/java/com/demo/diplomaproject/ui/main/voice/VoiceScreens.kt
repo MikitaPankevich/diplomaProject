@@ -6,7 +6,6 @@ import com.demo.diplomaproject.ui.main.voice.test.ResultFragment
 import com.demo.diplomaproject.ui.main.voice.test.SoundFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 
-
 object VoiceScreens {
 
     object SoundScreen : SupportAppScreen() {

@@ -34,6 +34,7 @@ class SettingsContainerFragment : BaseFragment(), SettingsView {
         settingsAboutDoctor.setOnClickListener { presenter.onAboutDoctorClicked() }
         settingsPatients.setOnClickListener { presenter.onPatientsListClicked() }
         settingsToolbarImage.setOnClickListener { presenter.onLogoutClicked() }
+        settingsLanguage.setOnClickListener { presenter.onLanguageClicked() }
     }
 
     override fun showVersion(versionName: String) {
@@ -48,6 +49,5 @@ class SettingsContainerFragment : BaseFragment(), SettingsView {
             settingsPatients.visible()
             settingsAboutDoctor.gone()
         }
-
     }
 }

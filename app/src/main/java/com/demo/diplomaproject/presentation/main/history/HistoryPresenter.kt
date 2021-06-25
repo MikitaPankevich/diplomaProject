@@ -21,7 +21,6 @@ class HistoryPresenter @Inject constructor(
         }
     }
 
-
     fun onBackPressed() {
         flowRouter.exit()
     }

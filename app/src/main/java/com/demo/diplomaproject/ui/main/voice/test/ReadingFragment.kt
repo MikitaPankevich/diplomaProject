@@ -8,12 +8,10 @@ import android.os.Bundle
 import android.os.IBinder
 import android.view.View
 import androidx.core.os.bundleOf
-import androidx.core.view.isVisible
 import com.demo.diplomaproject.R
 import com.demo.diplomaproject.core.BaseFragment
 import com.demo.diplomaproject.di.DI
 import com.demo.diplomaproject.di.PrimitiveWrapper
-import com.demo.diplomaproject.extensions.gone
 import com.demo.diplomaproject.extensions.invisible
 import com.demo.diplomaproject.extensions.tryToGetLong
 import com.demo.diplomaproject.extensions.visible

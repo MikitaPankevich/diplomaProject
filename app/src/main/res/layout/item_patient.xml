@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Email: "
+        android:text="@string/patient_email"
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/patientName" />
@@ -41,6 +41,7 @@
         android:id="@+id/patientEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:textAppearance="@style/TextAppearance.Regular.18.Black"
         app:layout_constraintStart_toEndOf="@id/patientEmailLabel"
         app:layout_constraintTop_toTopOf="@id/patientEmailLabel"
@@ -54,7 +55,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginHorizontal="110dp"
         android:gravity="center"
-        android:text="Show history"
+        android:text="@string/patient_show_history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/patientEmailLabel" />

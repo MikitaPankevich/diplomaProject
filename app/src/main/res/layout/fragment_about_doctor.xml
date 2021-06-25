@@ -17,7 +17,7 @@
             android:id="@+id/doctorToolbarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About Doctor"
+            android:text="@string/about_doctor_toolbar"
             android:textAppearance="@style/TextAppearance.Bold.20.White" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -40,7 +40,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:visibility="gone"
-        android:text="Couldn't find your doctor"
+        android:text="@string/about_doctor_couldnt_find_doctor"
         android:textAppearance="@style/TextAppearance.Bold.18.Black"
         app:layout_constraintBottom_toTopOf="@id/doctorFindButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
         android:layout_marginHorizontal="100dp"
         android:gravity="center"
         android:visibility="gone"
-        android:text="Find doctor"
+        android:text="@string/about_doctor_find_doctor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +96,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Your current Doctor info:"/>
+            android:text="@string/about_doctor_doctor_info"/>
 
         <TextView
             android:id="@+id/currentDoctorName"
@@ -122,7 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="University: "
+            android:text="@string/about_doctor_university"
             android:textAppearance="@style/TextAppearance.Regular.18.Black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/currentDoctorName" />
@@ -141,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Experience: "
+            android:text="@string/about_doctor_experience"
             android:textAppearance="@style/TextAppearance.Regular.18.Black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/currentDoctorUniversityLabel" />
@@ -164,7 +164,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:textColor="@color/red"
-            android:text="Clear doctor"
+            android:text="@string/about_doctor_clear_doctor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/currentDoctorExperienceLabel" />

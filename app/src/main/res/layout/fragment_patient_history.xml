@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="History"
+            android:text="@string/patient_history"
             android:textAppearance="@style/TextAppearance.Bold.20.White" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -41,7 +41,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:visibility="gone"
-        android:text="No history yet."
+        android:text="@string/patient_no_history_yet"
         android:textAppearance="@style/TextAppearance.Bold.18.Black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,6 +1,5 @@
 package com.demo.diplomaproject.di.provider
 
-import com.demo.diplomaproject.BuildConfig
 import com.demo.diplomaproject.extensions.addLoggingInterceptor
 import com.demo.diplomaproject.extensions.debug
 import okhttp3.OkHttpClient

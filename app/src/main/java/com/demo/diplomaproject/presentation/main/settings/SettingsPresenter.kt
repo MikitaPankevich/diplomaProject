@@ -29,7 +29,6 @@ class SettingsPresenter @Inject constructor(
         viewState.shouldShowPatientUI(authInteractor.getProfile()?.role == ParticipateType.PATIENT)
     }
 
-
     fun onBackPressed() {
         flowRouter.exit()
     }
@@ -42,13 +41,17 @@ class SettingsPresenter @Inject constructor(
         authInteractor
             .logout()
             .subscribe(
-                {flowRouter.newRootFlow(Screens.AuthFlow)},
-                {}
+                { flowRouter.newRootFlow(Screens.AuthFlow) },
+                { }
             )
             .connect()
     }
 
     fun onPatientsListClicked() {
         flowRouter.startFlow(SettingsScreens.PatientsScreen)
+    }
+
+    fun onLanguageClicked() {
+        flowRouter.startFlow(SettingsScreens.LanguageScreen)
     }
 }

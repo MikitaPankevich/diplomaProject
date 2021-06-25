@@ -10,7 +10,6 @@ class ProfilePresenter @Inject constructor(
     private val flowRouter: FlowRouter
 ) : BasePresenter<ProfileView>() {
 
-
     fun onBackPressed() {
         flowRouter.exit()
     }

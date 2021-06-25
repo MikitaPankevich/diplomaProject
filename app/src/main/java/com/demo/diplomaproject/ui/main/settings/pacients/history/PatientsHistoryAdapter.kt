@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.demo.diplomaproject.R
 import com.demo.diplomaproject.domain.entity.TestResult
-import java.util.ArrayList
 
 class PatientsHistoryAdapter : RecyclerView.Adapter<PatientsHistoryViewHolder>() {
 

@@ -3,7 +3,6 @@ package com.demo.diplomaproject.ui.auth.login
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import com.demo.diplomaproject.R
 import com.demo.diplomaproject.core.BaseFragment
@@ -49,7 +48,7 @@ class LoginFragment : BaseFragment(), LoginView {
     }
 
     override fun showErrorDialog(message: String) {
-        TODO("Not yet implemented")
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     override fun showEmailErrorMessage(message: String) {

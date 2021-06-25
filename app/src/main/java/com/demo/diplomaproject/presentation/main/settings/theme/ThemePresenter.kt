@@ -10,7 +10,6 @@ class ThemePresenter @Inject constructor(
     private val flowRouter: FlowRouter
 ) : BasePresenter<ThemeView>() {
 
-
     fun onBackPressed() {
         flowRouter.exit()
     }

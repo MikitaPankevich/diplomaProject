@@ -2,9 +2,7 @@ package com.demo.diplomaproject.presentation.main.settings.pacients
 
 import com.demo.diplomaproject.core.BasePresenter
 import com.demo.diplomaproject.domain.entity.UserProfile
-import com.demo.diplomaproject.domain.interactor.AuthInteractor
 import com.demo.diplomaproject.domain.interactor.DatabaseInteractor
-import com.demo.diplomaproject.presentation.main.settings.doctor.DoctorView
 import com.demo.diplomaproject.ui.main.settings.SettingsScreens
 import moxy.InjectViewState
 import ru.terrakok.cicerone.Router

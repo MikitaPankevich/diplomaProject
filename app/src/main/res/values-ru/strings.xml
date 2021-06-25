@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diploma Project</string>
+
+    <!-- Common !-->
+    <string name="doctor">Доктор</string>
+    <string name="patient">Пациент</string>
+    <string name="fill_field">Поле должно быть заполнено</string>
+    <string name="ok">Ок</string>
+    <string name="cancel">Отмена</string>
+
+    <!-- Language !-->
+    <string name="language_english">Английский</string>
+    <string name="language_russian">Русский</string>
+    <string name="language_toolbar">Язык</string>
+    <string name="dialog_title">Сменить язык</string>
+    <string name="dialog_confirmation_message">Вы уверены, что хотите сменить язык ?</string>
+
+    <!-- Registration !-->
+    <string name="registration_title">Регистрация</string>
+    <string name="registration_email_address">Почтовый адресс</string>
+    <string name="registration_password">Пароль</string>
+    <string name="registration_repeat_password">Повторите пароль</string>
+    <string name="registration_name">Имя</string>
+    <string name="registration_surname">Фамилия</string>
+    <string name="registration_choose_your_role">Выберите вашу роль</string>
+    <string name="registration_work_experience">Опыт работы</string>
+    <string name="registration_education">Образование</string>
+    <string name="registration_register">Зарегистрироваться</string>
+    <string name="registration_already_have_account">У вас уже есть аккаунт ?</string>
+    <string name="registration_login">Войти</string>
+    <string name="incorrect_email_error">Пожалуйста введите корректный адресс.</string>
+    <string name="short_password_error">Ваш пароль должнен быть между 6 и 30 символами.</string>
+    <string name="not_the_same_password_error">Пожалуйста убедитесь, что пароли совпадают.</string>
+
+    <!-- About doctor !-->
+    <string name="about_doctor_toolbar">О докторе</string>
+    <string name="about_doctor_couldnt_find_doctor">Не могу найти доктора</string>
+    <string name="about_doctor_find_doctor">Найти доктора</string>
+    <string name="about_doctor_doctor_info">Информация о вашем текущем враче:</string>
+    <string name="about_doctor_university">Университет:</string>
+    <string name="about_doctor_experience">Опыт работы:</string>
+    <string name="about_doctor_clear_doctor">Очистить</string>
+
+    <!-- History !-->
+    <string name="history_toolbar">История</string>
+    <string name="history_no_history">История пока что пуста!</string>
+
+    <!-- Login !-->
+    <string name="login_toolbar">Войти</string>
+    <string name="login_email_address">Почтовый адресс</string>
+    <string name="login_password">Пароль</string>
+    <string name="login_login">Войти</string>
+    <string name="login_dont_have_account_yet">У вас ещё нет аккаунта ?</string>
+    <string name="login_ask_for_registration">Зарегистрируйтесь</string>
+
+    <!-- Onboarding !-->
+    <string name="onboarding_welcome">Узнай качество своего голоса!</string>
+    <string name="onboarding_login">Войти</string>
+    <string name="onboarding_create_account">Создать аккаунт</string>
+
+    <!-- Patient History !-->
+    <string name="patient_history">История</string>
+    <string name="patient_no_history_yet">История пока что пуста.</string>
+
+    <!-- Patients List !-->
+    <string name="patients_toolbar">Пациенты</string>
+    <string name="no_patients_yet">Пока что у вас нет пациентов.</string>
+
+    <!-- Reading test !-->
+    <string name="reading_toolbar">Страница 2: Чтение</string>
+    <string name="reading_first">1. Держите мобильный телефон на расстоянии 30 см от вашего рта.</string>
+    <string name="reading_second">2. Нажмите \'Старт\'</string>
+    <string name="reading_third">3. Прочтите текст: \'Дом в котором я живу расположен на окраине маленького городка\'.</string>
+    <string name="reading_fouth">4. Нажмите \'СТОП\'</string>
+
+    <!-- Result !-->
+    <string name="result_toolbar">Страница 3: Результат</string>
+    <string name="result_title">Индекс Акустического Качества Голоса</string>
+    <string name="result_got_it">Понятно</string>
+    <string name="test_result_bad">Тест обнаружил значительные изменения вашего голоса, которые могут быть вызываны серьёзными заболеваниями гортани!</string>
+    <string name="test_suggestion_bad">Вам необходимо посетить оториноларинголога(ЛОР)</string>
+    <string name="test_result_good">Тест не выявил каких-либо отклонений</string>
+    <string name="test_suggestion_good">Всё в порядке</string>
+
+    <!-- Settings !-->
+    <string name="settings_toolbar">Настройки</string>
+    <string name="settings_profile">Профиль</string>
+    <string name="settings_language">Язык</string>
+    <string name="settings_patients_list">Лист пациентов</string>
+    <string name="settings_about_doctor">О докторе</string>
+    <string name="settings_version">Версия:</string>
+
+    <!-- Sound test !-->
+    <string name="sound_toolbar">Страница 1: Звучание</string>
+    <string name="sound_first">1. Держите мобильный телефон на расстоянии 30 см от вашего рта.</string>
+    <string name="sound_second">2. Нажмите \'СТАРТ\'</string>
+    <string name="sound_third">3. Произнести протяжный гласный звук \'аааа\' в течении 4-х секунд.</string>
+
+    <!-- Voice test preview !-->
+    <string name="voice_test_toolbar">Тест голоса</string>
+    <string name="voice_test_title">Когда вы будете готовы, нажмите на иконку ниже.</string>
+    <string name="voice_test_advice">Пожалуйста убедитесь, что вы находитесь в тихом месте без посторонних шумов.</string>
+
+    <!-- Item doctor !-->
+    <string name="item_doctor_university">Университет: </string>
+    <string name="item_doctor_experience">Опыт работы: </string>
+
+    <!-- Item history !-->
+    <string name="item_history_average">Средний уровень громкости:</string>
+    <string name="item_history_min_rms">Мин RMS:</string>
+    <string name="item_history_max_rms">Макс RMS:</string>
+    <string name="item_history_result">Индекс голоса:</string>
+    <string name="item_history_date">Дата:</string>
+    <string name="item_history_db">дБ</string>
+
+    <!-- Item patient !-->
+    <string name="patient_email">Почтовый адресс:</string>
+    <string name="patient_show_history">Показать историю</string>
+
+    <!-- Bottom tabs !-->
+    <string name="voice_tab">Голос</string>
+    <string name="history_tab">История</string>
+    <string name="settings_tab">Настройки</string>
+
+</resources>

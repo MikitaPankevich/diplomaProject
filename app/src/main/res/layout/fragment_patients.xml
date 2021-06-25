@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Patients"
+            android:text="@string/patients_toolbar"
             android:textAppearance="@style/TextAppearance.Bold.20.White" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="No patients yet."
+        android:text="@string/no_patients_yet"
         android:textAppearance="@style/TextAppearance.Bold.18.Black"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"

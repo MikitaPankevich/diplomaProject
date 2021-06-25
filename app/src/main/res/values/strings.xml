@@ -1,18 +1,132 @@
 <resources>
     <string name="app_name">Diploma Project</string>
 
-    <string name="network_error">Network error</string>
-    <string name="timeout_error">Timeout error</string>
-    <string name="unknown_error">Unknown error</string>
+    <string name="network_error" translatable="false">Network error</string>
+    <string name="timeout_error" translatable="false">Timeout error</string>
+    <string name="unknown_error" translatable="false">Unknown error</string>
+
+    <string name="language_english_non_translatable" translatable="false">English</string>
+    <string name="language_russian_non_translatable" translatable="false">Русский</string>
+
+    <!-- Common !-->
+    <string name="doctor">Doctor</string>
+    <string name="patient">Patient</string>
+    <string name="fill_field">Field should be filled</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Language !-->
+    <string name="language_english">English</string>
+    <string name="language_russian">Russian</string>
+    <string name="language_toolbar">Language</string>
+    <string name="dialog_title">Change language</string>
+    <string name="dialog_confirmation_message">Are you sure you want to change the app language ?</string>
+
+    <!-- Registration !-->
+    <string name="registration_title">Registration</string>
+    <string name="registration_email_address">Email address</string>
+    <string name="registration_password">Password</string>
+    <string name="registration_repeat_password">Repeat password</string>
+    <string name="registration_name">Name</string>
+    <string name="registration_surname">Surname</string>
+    <string name="registration_choose_your_role">Choose your role</string>
+    <string name="registration_work_experience">Work experience</string>
+    <string name="registration_education">Education</string>
+    <string name="registration_register">Register</string>
+    <string name="registration_already_have_account">You already have account ?</string>
+    <string name="registration_login">Login</string>
     <string name="incorrect_email_error">Please enter a valid email address.</string>
     <string name="short_password_error">Your password must be between 6 and 30 characters.</string>
     <string name="not_the_same_password_error">Please make sure your passwords match.</string>
 
+    <!-- About doctor !-->
+    <string name="about_doctor_toolbar">About Doctor</string>
+    <string name="about_doctor_couldnt_find_doctor">Couldn\'t find your doctor</string>
+    <string name="about_doctor_find_doctor">Find doctor</string>
+    <string name="about_doctor_doctor_info">Your current Doctor info:</string>
+    <string name="about_doctor_university">University:</string>
+    <string name="about_doctor_experience">Experience:</string>
+    <string name="about_doctor_clear_doctor">Clear doctor</string>
 
-    <string name="language_english_non_translatable" translatable="false">English</string>
-    <string name="language_russian_non_translatable" translatable="false">Русский</string>
-    <!-- Language !-->
-    <string name="language_english">English</string>
-    <string name="language_russian">Russian</string>
+    <!-- History !-->
+    <string name="history_toolbar">History</string>
+    <string name="history_no_history">No history yet.\nFirstly do some tests!</string>
+
+    <!-- Login !-->
+    <string name="login_toolbar">Login</string>
+    <string name="login_email_address">Email address</string>
+    <string name="login_password">Password</string>
+    <string name="login_login">Login</string>
+    <string name="login_dont_have_account_yet">You dont have account yet ?</string>
+    <string name="login_ask_for_registration">Registration</string>
+
+    <!-- Onboarding !-->
+    <string name="onboarding_welcome">Find out the quality of your voice!</string>
+    <string name="onboarding_login">Login</string>
+    <string name="onboarding_create_account">Create account</string>
+
+    <!-- Patient History !-->
+    <string name="patient_history">History</string>
+    <string name="patient_no_history_yet">No history yet.</string>
+
+    <!-- Patients List !-->
+    <string name="patients_toolbar">Patients</string>
+    <string name="no_patients_yet">No patients yet.</string>
+
+    <!-- Reading test !-->
+    <string name="reading_toolbar">Page 2: Reading Test</string>
+    <string name="reading_first">1. Keep your phone 30cm away from your mouth</string>
+    <string name="reading_second">2. Press \'START\'</string>
+    <string name="reading_third">3. Read the text: \'The house I live in is located on the outskirts of a small town\'</string>
+    <string name="reading_fouth">4. Press \'STOP\'</string>
+
+    <!-- Result !-->
+    <string name="result_toolbar">Page 3: Result</string>
+    <string name="result_title">Voice Acoustic Quality Index</string>
+    <string name="result_got_it">Got it</string>
+    <string name="test_result_bad">The test found significant changes in your voice that can be caused by a serious condition in the larynx.</string>
+    <string name="test_suggestion_bad">You need to visit an otolaryngologist</string>
+    <string name="test_result_good">The test did not reveal any abnormalities</string>
+    <string name="test_suggestion_good">Everything is fine</string>
+
+    <!-- Settings !-->
+    <string name="settings_toolbar">Settings</string>
+    <string name="settings_profile">Profile</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_patients_list">Patients list</string>
+    <string name="settings_about_doctor">About doctor</string>
+    <string name="settings_version">Version:</string>
+
+    <!-- Sound test !-->
+    <string name="sound_toolbar">Page 1: Sound Test</string>
+    <string name="sound_first">1. Keep your phone 30cm away from your mouth</string>
+    <string name="sound_second">2. Press \'START\'</string>
+    <string name="sound_third">3. Say a lingering vowel \'aaaa\' for 4 seconds</string>
+
+    <!-- Voice test preview !-->
+    <string name="voice_test_toolbar">Voice Test</string>
+    <string name="voice_test_title">When you will be ready tap on the icon below.</string>
+    <string name="voice_test_advice">Please make sure you are in a quiet environment and have no extraneous noise.</string>
+
+    <!-- Item doctor !-->
+    <string name="item_doctor_university">University: </string>
+    <string name="item_doctor_experience">Experience: </string>
+
+    <!-- Item history !-->
+    <string name="item_history_average">Average sound level:</string>
+    <string name="item_history_min_rms">Min RMS:</string>
+    <string name="item_history_max_rms">Max RMS:</string>
+    <string name="item_history_result">Result index:</string>
+    <string name="item_history_date">Date:</string>
+    <string name="item_history_db">dB</string>
+
+    <!-- Item patient !-->
+    <string name="patient_email">Email:</string>
+    <string name="patient_show_history">Show history</string>
+
+    <!-- Bottom tabs !-->
+    <string name="voice_tab">Voice</string>
+    <string name="history_tab">History</string>
+    <string name="settings_tab">Settings</string>
 
 </resources>

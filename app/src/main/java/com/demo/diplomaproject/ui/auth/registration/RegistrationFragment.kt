@@ -103,12 +103,12 @@ class RegistrationFragment : BaseFragment(), RegistrationView {
     }
 
     private fun initViews() {
-        val items = listOf("Patient", "Doctor")
+        val items = listOf(getString(R.string.patient), getString(R.string.doctor))
         val adapter = ArrayAdapter(requireContext(), R.layout.menu_item, items)
         roleMenu?.setAdapter(adapter)
         roleMenu?.addTextChangedListener {
             it?.let { role ->
-                if (role.toString() == "Doctor") {
+                if (role.toString() == getString(R.string.doctor)) {
                     workExperienceLayout.visible()
                     universityLayout.visible()
                 } else {

@@ -4,7 +4,6 @@ import com.demo.diplomaproject.core.global.scheduler.SchedulersProvider
 import com.demo.diplomaproject.domain.entity.UserProfile
 import com.demo.diplomaproject.model.data.storage.Prefs
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import io.reactivex.Completable

@@ -50,7 +50,6 @@ class SpeechService : Service() {
         }
     }
 
-
     override fun onBind(intent: Intent?): IBinder? {
 
         return binder
@@ -76,7 +75,6 @@ class SpeechService : Service() {
     fun startListening() {
         speechRecognizer.startListening(speechRecognizerIntent)
     }
-
 
     fun stopListening() {
         speechRecognizer.stopListening()

@@ -6,7 +6,6 @@ import com.demo.diplomaproject.di.DI
 import com.demo.diplomaproject.di.module.FlowNavigationModule
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router
-import ru.terrakok.cicerone.android.support.SupportAppNavigator
 import toothpick.Scope
 import javax.inject.Inject
 

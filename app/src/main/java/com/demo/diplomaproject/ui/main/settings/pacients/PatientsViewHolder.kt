@@ -14,7 +14,7 @@ class PatientsViewHolder(
 
     fun bind(userProfile: UserProfile, itemClickListener: (patient: UserProfile) -> Unit) {
         patientName.text = userProfile.name
-        patientSurname. text = userProfile.surname
+        patientSurname.text = userProfile.surname
         patientEmail.text = userProfile.email
         patientShowHistoryButton.setOnClickListener { itemClickListener.invoke(userProfile) }
     }

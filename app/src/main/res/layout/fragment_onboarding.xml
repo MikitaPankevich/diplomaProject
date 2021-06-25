@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Find out the quality of your voice!"
+        android:text="@string/onboarding_welcome"
         app:layout_constraintTop_toBottomOf="@id/onboardingLogoImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
         android:layout_marginHorizontal="80dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Login"
+        android:text="@string/onboarding_login"
         app:layout_constraintTop_toBottomOf="@id/onboardingGreetingsText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -49,7 +49,7 @@
         android:layout_height="60dp"
         android:layout_marginHorizontal="80dp"
         android:gravity="center"
-        android:text="Create account"
+        android:text="@string/onboarding_create_account"
         app:layout_constraintTop_toBottomOf="@id/onboardingLoginButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

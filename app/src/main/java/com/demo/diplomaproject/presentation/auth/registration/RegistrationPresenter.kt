@@ -67,24 +67,24 @@ class RegistrationPresenter @Inject constructor(
         } else true
 
         val isNameFilled = if (name.isEmpty()) {
-            viewState.showNameEmptyErrorMessage("Field should be filled")
+            viewState.showNameEmptyErrorMessage(resourceManager.getString(R.string.fill_field))
             false
         } else true
 
         val isSurnameFilled = if (surname.isEmpty()) {
-            viewState.showSurnameEmptyErrorMessage("Field should be filled")
+            viewState.showSurnameEmptyErrorMessage(resourceManager.getString(R.string.fill_field))
             false
         } else true
 
         val userRole = when (role) {
-            "Doctor" -> ParticipateType.DOCTOR
-            "Patient" -> ParticipateType.PATIENT
+            resourceManager.getString(R.string.doctor) -> ParticipateType.DOCTOR
+            resourceManager.getString(R.string.patient) -> ParticipateType.PATIENT
             else -> ParticipateType.CLEAR
         }
         val isRoleFilled = if (userRole != ParticipateType.CLEAR) {
             true
         } else {
-            viewState.showRoleEmptyErrorMessage("Field should be filled")
+            viewState.showRoleEmptyErrorMessage(resourceManager.getString(R.string.fill_field))
             false
         }
 
@@ -94,7 +94,7 @@ class RegistrationPresenter @Inject constructor(
                 if (experience.isNotEmpty()) {
                     true
                 } else {
-                    viewState.showExperienceEmptyErrorMessage("Field should be filled")
+                    viewState.showExperienceEmptyErrorMessage(resourceManager.getString(R.string.fill_field))
                     false
                 }
             }
@@ -107,7 +107,7 @@ class RegistrationPresenter @Inject constructor(
                 if (university.isNotEmpty()) {
                     true
                 } else {
-                    viewState.showUniversityEmptyErrorMessage("Field should be filled")
+                    viewState.showUniversityEmptyErrorMessage(resourceManager.getString(R.string.fill_field))
                     false
                 }
             }

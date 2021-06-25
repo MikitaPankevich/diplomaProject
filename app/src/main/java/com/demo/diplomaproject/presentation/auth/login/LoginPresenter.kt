@@ -8,8 +8,6 @@ import com.demo.diplomaproject.domain.interactor.DatabaseInteractor
 import com.demo.diplomaproject.presentation.auth.AuthProperties.MAX_PASSWORD_LENGTH
 import com.demo.diplomaproject.presentation.auth.AuthProperties.MIN_PASSWORD_LENGTH
 import com.demo.diplomaproject.ui.auth.AuthScreens
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import moxy.InjectViewState
 import javax.inject.Inject
 
@@ -50,11 +48,14 @@ class LoginPresenter @Inject constructor(
                         databaseInteractor
                             .getProfile(email)
                             .subscribe(
-                                {
-                                    flowRouter.newRootScreen(Screens.MainFlow)},
+                                { databaseInteractor
+                                    .getHistory(email)
+                                    .subscribe(
+                                        { flowRouter.newRootScreen(Screens.MainFlow) },
+                                        {}
+                                    ) },
                                 { errorHandler.handleError(it) }
                             )
-                        databaseInteractor.getHistory(email).subscribe({},{})
                     },
                     { errorHandler.handleError(it) }
                 )

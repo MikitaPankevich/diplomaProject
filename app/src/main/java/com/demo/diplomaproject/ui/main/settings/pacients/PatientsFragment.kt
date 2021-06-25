@@ -9,12 +9,8 @@ import com.demo.diplomaproject.di.DI
 import com.demo.diplomaproject.domain.entity.UserProfile
 import com.demo.diplomaproject.extensions.gone
 import com.demo.diplomaproject.extensions.visible
-import com.demo.diplomaproject.presentation.main.settings.doctor.DoctorPresenter
-import com.demo.diplomaproject.presentation.main.settings.doctor.DoctorView
 import com.demo.diplomaproject.presentation.main.settings.pacients.PatientsPresenter
 import com.demo.diplomaproject.presentation.main.settings.pacients.PatientsView
-import com.demo.diplomaproject.ui.main.settings.doctor.DoctorAdapter
-import kotlinx.android.synthetic.main.fragment_about_doctor.*
 import kotlinx.android.synthetic.main.fragment_patients.*
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter

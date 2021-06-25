@@ -6,18 +6,18 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/settingsToolbar"
+        android:id="@+id/languageToolbar"
         style="@style/Widget.Toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_arrow_back">
 
         <TextView
-            android:id="@+id/settingsToolbarText"
+            android:id="@+id/languageToolbarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Language"
+            android:text="@string/language_toolbar"
             android:textAppearance="@style/TextAppearance.Bold.20.White" />
     </androidx.appcompat.widget.Toolbar>
 

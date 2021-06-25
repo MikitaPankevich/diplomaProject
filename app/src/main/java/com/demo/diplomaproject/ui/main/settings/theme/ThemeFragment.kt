@@ -2,8 +2,6 @@ package com.demo.diplomaproject.ui.main.settings.theme
 
 import com.demo.diplomaproject.R
 import com.demo.diplomaproject.core.BaseFragment
-import com.demo.diplomaproject.presentation.main.settings.doctor.DoctorPresenter
-import com.demo.diplomaproject.presentation.main.settings.doctor.DoctorView
 import com.demo.diplomaproject.presentation.main.settings.theme.ThemePresenter
 import com.demo.diplomaproject.presentation.main.settings.theme.ThemeView
 import moxy.presenter.InjectPresenter

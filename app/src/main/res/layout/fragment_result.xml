@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="85dp">
@@ -16,7 +17,7 @@
             android:id="@+id/resultToolbarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Page 3: Result"
+            android:text="@string/result_toolbar"
             android:textAppearance="@style/TextAppearance.Bold.20.White" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="40dp"
-        android:text="Voice Acoustic Quality Index"
+        android:text="@string/result_title"
         android:textAppearance="@style/TextAppearance.Bold.20.Black"
         app:layout_constraintBottom_toTopOf="@id/resultText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,12 +39,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="7.86"
         android:textAppearance="@style/TextAppearance.Bold.50.Black"
         app:layout_constraintBottom_toTopOf="@id/resultDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/resultHeaderText" />
+        app:layout_constraintTop_toBottomOf="@id/resultHeaderText"
+        tools:text="7.86" />
 
     <TextView
         android:id="@+id/resultDescription"
@@ -51,12 +52,12 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingHorizontal="50dp"
-        android:text="The test found significant changes in your voice that can be caused by a serious condition in the larynx."
         android:textAppearance="@style/TextAppearance.Bold.18.Black"
         app:layout_constraintBottom_toTopOf="@id/resultSuggestion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/resultText" />
+        app:layout_constraintTop_toBottomOf="@id/resultText"
+        tools:text="The test found significant changes in your voice that can be caused by a serious condition in the larynx." />
 
     <TextView
         android:id="@+id/resultSuggestion"
@@ -64,12 +65,12 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingHorizontal="50dp"
-        android:text="You need to visit an otolaryngologist"
         android:textAppearance="@style/TextAppearance.Bold.18.Black"
         app:layout_constraintBottom_toTopOf="@+id/resultGotButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/resultDescription" />
+        app:layout_constraintTop_toBottomOf="@id/resultDescription"
+        tools:text="You need to visit an otolaryngologist" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/resultGotButton"
@@ -78,7 +79,7 @@
         android:layout_height="60dp"
         android:layout_marginHorizontal="100dp"
         android:gravity="center"
-        android:text="Got it"
+        android:text="@string/result_got_it"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
